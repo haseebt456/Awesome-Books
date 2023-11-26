@@ -39,6 +39,7 @@ li {
     flex-direction: column;
     justify-content: space-evenly;
     width: 80%;
+    align-items: center;
 }
 .book {
     display: flex;
@@ -46,34 +47,82 @@ li {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    max-width: 768px;
     background-color: white;
     border-radius: 10px;
     border: 1px solid black;
     padding: 10px;
 }
+h2 {
+    font-size: 30px;
+    font-family: 'Georgia', serif;
+}
+h3 {
+    font-family: 'Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+p {
+    font-size: 20px;
+    font-weight: bold;
+}
 .remove {
-    border: 1px solid black;
+    border:none;
     border-radius: 5px;
     text-decoration: none;
-    color: red;
+    color: white;
     width: 100px;
     height: 50px;
-    background-color: black;
+    background-color: grey;
 }
 .active {
     display: flex;
 }
 .input-section {
-    display: flex;
-    flex-direction: column;
-    height: 150px;
-    justify-content: space-evenly;
-}
-
+    width: 80%;
+    margin: 1rem auto;
+  }
+  
+  .input-author,
+  .input-title {
+    width: 200px;
+    display: block;
+    margin-block: 0.5rem;
+    margin-inline: auto;
+    height: 2rem;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+  
+  input::placeholder {
+    padding: 2%;
+  }
+  
+  .input-author:hover,
+  .input-title:hover {
+    border: 1.5px;
+    box-shadow: 0.2rem 0.2rem 0 #686a6b;
+  }
+  
+  #btnAdd {
+    width: 70px;
+    display: block;
+    margin-inline: auto;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 2rem;
+  }
+  
+  
 
 footer {
-    display: flex;
-    align-items: center;
     position: absolute;
     bottom: 0;
-}
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
+    color: rgb(241, 238, 238);
+    font-weight: 800;
+  }
+  
