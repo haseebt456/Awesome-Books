@@ -61,3 +61,5 @@ form.addEventListener('submit',(e)=>{
 
     bookManagement.clearFormFields();
 });
+
+window.addEventListener('load',bookManagement.displayBooks);
