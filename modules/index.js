@@ -8,6 +8,11 @@ class Books {
 }
 
 const container= document.querySelector('.reading-collection');
+/* function deleteBook(){
+    console.log(this);
+    this.parentElement.remove();
+    bookManagement.deleteBook(this.id);
+}*/
 class bookManagement {
     static addBooks(book){
         const bookDiv=document.createElement('div');
@@ -20,6 +25,7 @@ class bookManagement {
         bookAuthor.textContent = book.author;
         removeBtn.textContent = 'remove';
         removeBtn.setAttribute('id',book.id);
+        removeBtn.addEventListener("click", bookManagement.deleteBook)
         bookDiv.append(bookTitle);
         bookDiv.appendChild(bookAuthor);
         bookDiv.appendChild(removeBtn);
@@ -28,9 +34,11 @@ class bookManagement {
         const bookJSON = JSON.stringify(book);
         localStorage.setItem(book.id,bookJSON);
     }
-
-    static deleteBook(bookID){
-        localStorage.removeItem(bookID);
+    static deleteBook(){
+        console.log(this);
+        console.log(this.id);
+    this.parentElement.remove();
+        localStorage.removeItem(this.id);
     }
     static displayBooks(){
         for (let i= 0; i < localStorage.length ; i++)
