@@ -40,4 +40,24 @@ class bookManagement {
             bookManagement.addBooks(book);
         }
     }
+
+    static clearFormFields (){
+        document.querySelector('#title').value='';
+        document.querySelector('#author').value = '';
+    }
 }
+
+const form=document.querySelector('.input-section');
+
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const title = document.querySelector('#title').value;
+    const author = document.querySelector('#author').value;
+    const id = Math.random();
+
+    const newBook = new Books(id,title,author);
+
+    bookManagement.addBooks(newBook);
+
+    bookManagement.clearFormFields();
+});
