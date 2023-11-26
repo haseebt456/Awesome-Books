@@ -65,9 +65,9 @@ form.addEventListener('submit',(e)=>{
 window.addEventListener('load',bookManagement.displayBooks);
 
 document.addEventListener('DOMContentLoaded',function(){
-    const listbtn = document.getElementbyId('index');
-    const addbtn  = document.getElementById('add_book');
-    const conatctbtn = document.getElementById('conatct');
+    const listbtn = document.getElementById('list-btn');
+    const addbtn  = document.getElementById('add_book-btn');
+    const contactbtn = document.getElementById('contact-btn');
     
     const bookList = document.getElementById('index');
     const addBookPage = document.getElementById('add_book');
@@ -75,9 +75,9 @@ document.addEventListener('DOMContentLoaded',function(){
     
     showPage('index');
 
-    listbtn.addEventListener('click',showPage('index'));
-    addbtn.addEventListener('click',showPage('add_book'));
-    conatctbtn.addEventListener('click',showPage('contact'));
+    listbtn.addEventListener('click',() =>showPage('index'));
+    addbtn.addEventListener('click',() => showPage('add_book'));
+    contactbtn.addEventListener('click',() => showPage('contact'));
 
     function showPage(pageId)
     {
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded',function(){
         addBookPage.classList.remove('active')
         conatctPage.classList.remove('active')
 
-        const selectedPage = document.getElementById('${pageId}');
+        const selectedPage = document.getElementById(pageId);
         selectedPage.classList.add('active');
     }
 })
