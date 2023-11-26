@@ -19,14 +19,17 @@ class bookManagement {
         bookDiv.classList.add('book');
         const bookTitle= document.createElement('h2');
         const bookAuthor = document.createElement('h3');
+        const text = document.createElement('p');
         const removeBtn = document.createElement('button');
         removeBtn.classList.add('remove');
         bookTitle.textContent = book.title;
+        text.textContent = 'By';
         bookAuthor.textContent = book.author;
-        removeBtn.textContent = 'remove';
+        removeBtn.textContent = 'Remove';
         removeBtn.setAttribute('id',book.id);
         removeBtn.addEventListener("click", bookManagement.deleteBook)
         bookDiv.append(bookTitle);
+        bookDiv.appendChild(text);
         bookDiv.appendChild(bookAuthor);
         bookDiv.appendChild(removeBtn);
         container.appendChild(bookDiv);

@@ -29,7 +29,6 @@ li {
 }
 
 .section {
-    display: flex;
     flex-direction: column;
     align-items: center;
     display: none;
@@ -38,15 +37,31 @@ li {
 .reading-collection {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
 }
 .book {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.remove {
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    color: red;
+    width: 100px;
+    height: 50px;
+    background-color: black;
 }
 .active {
-    display: block;
+    display: flex;
 }
 .input-section {
     display: flex;
