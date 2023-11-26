@@ -38,6 +38,12 @@ li {
     display: flex;
     flex-direction: column;
 }
+.book {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 .input-section {
     display: flex;
     flex-direction: column;

@@ -7,6 +7,11 @@ class Books {
     }
 }
 
-function addBooks (){
-
+const container= document.querySelector('.reading-collection');
+class bookManagement {
+    static myBooks=[];
+    static addBooks(book){
+        const bookDiv=document.createElement('div');
+        
+    }
 }
