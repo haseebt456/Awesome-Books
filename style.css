@@ -79,13 +79,14 @@ p {
     display: flex;
 }
 .input-section {
+    align-items: center;
     width: 80%;
     margin: 1rem auto;
   }
   
   .input-author,
   .input-title {
-    width: 200px;
+    width: 300px;
     display: block;
     margin-block: 0.5rem;
     margin-inline: auto;
