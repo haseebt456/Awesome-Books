@@ -63,3 +63,29 @@ form.addEventListener('submit',(e)=>{
 });
 
 window.addEventListener('load',bookManagement.displayBooks);
+
+document.addEventListener('DOMContentLoaded',function(){
+    const listbtn = document.getElementbyId('index');
+    const addbtn  = document.getElementById('add_book');
+    const conatctbtn = document.getElementById('conatct');
+    
+    const bookList = document.getElementById('index');
+    const addBookPage = document.getElementById('add_book');
+    const conatctPage = document.getElementById('contact');
+    
+    showPage('index');
+
+    listbtn.addEventListener('click',showPage('index'));
+    addbtn.addEventListener('click',showPage('add_book'));
+    conatctbtn.addEventListener('click',showPage('contact'));
+
+    function showPage(pageId)
+    {
+        bookList.classList.remove('active')
+        addBookPage.classList.remove('active')
+        conatctPage.classList.remove('active')
+
+        const selectedPage = document.getElementById('${pageId}');
+        selectedPage.classList.add('active');
+    }
+})

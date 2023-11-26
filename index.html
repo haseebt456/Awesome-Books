@@ -17,28 +17,27 @@
         </div>
         <nav  id="navigation">
             <ul class="nav-bar">
-            <li><a href="#" class="nav-list active-tab" data-tab="index">List</a></>
-            <li><a href="#" class="nav-list" data-tab="add_book">Add New</a></>
-            <li><a href="#" class="nav-list" data-tab="contact">Contact</a></>
+            <li><a href="#" class="nav-list active-tab" id="index">List</a></>
+            <li><a href="#" class="nav-list" id="add_book">Add New</a></>
+            <li><a href="#" class="nav-list" id="contact">Contact</a></>
             </ul>            
         </nav>
     </header>
-    <div class="date" id="date"></div>
     <main>
-        <section id="index" class="section b-tab active-tab" aria-label="section">
+        <section id="index" class="section active" >
             <div class="heading-container">
                 <h2>Your Reading List:</h2>
             </div>
             <div id="collection" class="reading-collection"></div>
         </section>
-        <section id="add_book" class="section b-tab" aria-label="section">
+        <section id="add_book" class="section" >
             <form class="input-section">
                 <input id="title" class="input-title" placeholder="Book Title">
                 <input id="author" class="input-author" placeholder="Book Author">
                 <input type="submit" id="btnAdd" class="button">
             </form>
         </section>
-        <section id="contact" class="section b-tab" aria-label="section">
+        <section id="contact" class="section" aria-label="section">
             <h1 class="title">Contact information</h1>
             <div class="contact-text"></div>
             <p>Do you have any questions or you just want to say "Hello"?</p>
@@ -53,8 +52,7 @@
     <footer>
         Copyright 2021 -Created by Ahmad Zia Yousufi & Faizan Zahid
     </footer>
-    <script src="./index.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0/build/global/luxon.min.js"></script>
+    <script src="./modules/index.js" type="module"></script>
 </body>
 
 </html>
