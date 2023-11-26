@@ -9,7 +9,6 @@ class Books {
 
 const container= document.querySelector('.reading-collection');
 class bookManagement {
-    static myBooks=[];
     static addBooks(book){
         const bookDiv=document.createElement('div');
         bookDiv.classList.add('.book');
@@ -20,12 +19,20 @@ class bookManagement {
         bookTitle.textContent = book.title;
         bookAuthor.textContent = book.author;
         removeBtn.textContent = 'remove';
+        removeBtn.setAttribute('id',book.id);
         bookDiv.appendChild(bookTitle);
         bookDiv.appendChild(bookAuthor);
         bookDiv.appendChild(removeBtn);
         container.appendChild(bookDiv);
 
-        const bookJSON = JSON.stringify(this.myBooks);
-        localStorage.setItem('book',bookJSON);
+        const bookJSON = JSON.stringify(book);
+        localStorage.setItem(book.id,bookJSON);
+    }
+
+    static deleteBook(bookID){
+        localStorage.removeItem(bookID);
+    }
+    static displayBooks(){
+        
     }
 }
