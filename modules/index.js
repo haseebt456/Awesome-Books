@@ -33,6 +33,11 @@ class bookManagement {
         localStorage.removeItem(bookID);
     }
     static displayBooks(){
-        
+        for (let i= 0; i < localStorage.length ; i++)
+        {
+            const keyBookId = localStorage.key(i);
+            const book = JSON.parse(localStorage.getItem(keyBookId));
+            bookManagement.addBooks(book);
+        }
     }
 }
